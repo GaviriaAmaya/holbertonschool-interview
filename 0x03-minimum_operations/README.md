@@ -30,3 +30,7 @@ Then, you just paste it again. In case that the amount of H is perfectly divisib
 3. If n divided by the iteration is perfect, add one at the number of operations
 
 4. Else, still iterating on it
+
+### Curious things
+
+* 27579073 is prime number. As it is never divided by any number, never gets the conditional. So, there's not other operation than paste

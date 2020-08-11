@@ -10,13 +10,22 @@ operations needed to result in exactly n H characters in the file.
 
 def minOperations(n):
     """ Calculates the fewest number of operations:
-        minOperations(12) = 7
+        minOperations(100) = 14
     """
     if n <= 1:
         return 0
     else:
-        ops = 2
-        for i in range(2, n + 1):
-            if n % i == 0:
-                ops += 1
-        return ops
+        copy = 1
+        paste = 1
+        clipboard = 1
+        h = 2
+        while(h != n):
+            if n % h == 0:
+                copy += 1
+                clipboard = h
+                paste += 1
+                h = h * 2
+            else:
+                h += clipboard
+                paste += 1
+        return (copy + paste)
