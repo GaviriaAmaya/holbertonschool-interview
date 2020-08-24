@@ -1,7 +1,7 @@
 #include "sandpiles.h"
 /**
  * print_grid - Prints a sandpile
- * @grid: Sandpile to be checked
+ * @grid1: Sandpile to be checked
  * Return: None (Void)
  */
 static void print_grid(int grid1[3][3])
@@ -39,7 +39,7 @@ bool is_stable(int grid[3][3])
 				break;
 		}
 	}
-	return(stable);
+	return (stable);
 }
 
 /**
