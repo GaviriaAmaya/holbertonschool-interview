@@ -1,10 +1,22 @@
 # 0. Minimum Operations
 
+## Content
+
+- [0. Minimum Operations](#0-minimum-operations)
+  - [Content](#content)
+  - [Context](#context)
+  - [Captain's log](#captains-log)
+    - [Manual approaching](#manual-approaching)
+    - [Pseudo code](#pseudo-code)
+    - [Curious things](#curious-things)
+
+## Context
+
 In a text file, there is a single character H. Your text editor can execute only two operations in this file: Copy All and Paste. Given a number n, write a method that calculates the fewest number of operations needed to result in exactly n H characters in the file.
 
-* Prototype: ```def minOperations(n)```
-* Returns an integer
-* If n is impossible to achieve, return 0
+- Prototype: ```def minOperations(n)```
+- Returns an integer
+- If n is impossible to achieve, return 0
 
 Example:
 
@@ -18,7 +30,7 @@ Number of operations: ```6```
 
 ### Manual approaching
 
-Starting, the minimum operations is always two: Copy the first H and paste it.
+Starting, the minimum operations always two: Copy the first H and paste it.
 Then, you just paste it again. In case that the amount of H is perfectly divisible by n, we can Copy all again and paste, adding one more operation. Else, the number of operations adds one at a time.
 
 ### Pseudo code
@@ -33,4 +45,4 @@ Then, you just paste it again. In case that the amount of H is perfectly divisib
 
 ### Curious things
 
-* 27579073 is a prime number. As it is never divided by any number, never gets the conditional. So, there's not another operation than paste
+- 27579073 is a prime number. As it is never divided by any number, never gets the conditional. So, there's not another operation than paste
