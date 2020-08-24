@@ -19,18 +19,18 @@ Number of operations: ```6```
 ### Manual approaching
 
 Starting, the minimum operations is always two: Copy the first H and paste it.
-Then, you just paste it again. In case that the amount of H is perfectly divisible by n, we can Copy all again and paste, adding one more operation. Else, the number of operations adds one at time.
+Then, you just paste it again. In case that the amount of H is perfectly divisible by n, we can Copy all again and paste, adding one more operation. Else, the number of operations adds one at a time.
 
 ### Pseudo code
 
-1. Go through the range of n
+1. Copy and paste the first h
 
-2. Save into a variable the amount of operations that have to be done, setted by 2
+2. If n is perfectly divisible by the amount of h, copy and paste again.
 
-3. If n divided by the iteration is perfect, add one at the number of operations
+3. Save the clipboard and duplicate the amount of h
 
-4. Else, still iterating on it
+4. Else, just paste, adding the clipboard to the amount of h
 
 ### Curious things
 
-* 27579073 is prime number. As it is never divided by any number, never gets the conditional. So, there's not other operation than paste
+* 27579073 is a prime number. As it is never divided by any number, never gets the conditional. So, there's not another operation than paste
