@@ -35,8 +35,10 @@ bool is_stable(int grid[3][3])
 		for (j = 0; j < 3; j++)
 		{
 			if (grid[i][j] > 3)
+			{
 				stable = false;
 				break;
+			}
 		}
 	}
 	return (stable);
@@ -68,13 +70,13 @@ void add_sandpile(int grid1[3][3], int grid2[3][3])
  **/
 void toppling(int grid1[3][3])
 {
-	int i, j, default_grid[3][3];
+	int i, j;
 
-	for (i = 0; i < 3; i++)
-	{
-		for (j = 0; j < 3; j++)
-			default_grid[i][j] = 0;
-	}
+	int default_grid[3][3] = {
+		{0, 0, 0},
+		{0, 0, 0},
+		{0, 0, 0}
+	};
 
 	for (i = 0; i < 3; i++)
 	{
@@ -109,7 +111,7 @@ void sandpiles_sum(int grid1[3][3], int grid2[3][3])
 {
 	add_sandpile(grid1, grid2);
 
-	while (is_stable(grid1) == false)
+	while (!is_stable(grid1))
 	{
 		printf("=\n");
 		print_grid(grid1);
