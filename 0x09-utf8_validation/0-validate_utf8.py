@@ -5,26 +5,16 @@
 def validUTF8(data):
     " Method that receives an array and returns boolean "
     current_bytes = 0
-
-    for num in data:
-        binary_rep = format(num, '#010b')[-8:]
-
-    if current_bytes == 0:
-        for bit in binary_rep:
-            if bit == '0':
-                break
+    for i, n in enumerate(data):
+        byte = n & 0xFF
+        if current_bytes:
+            if byte >> 6 != 2:
+                return False
+            current_bytes -= 1
+            continue
+        while (1 << abs(7 - current_bytes)) & byte:
             current_bytes += 1
-
-            if current_bytes == 0:
-                continue
-
         if current_bytes == 1 or current_bytes > 4:
             return False
-
-    else:
-        if not (binary_rep[0] == '1' and binary_rep == '0'):
-            return False
-
-    current_bytes -= 1
-
+        current_bytes = max(current_bytes - 1, 0)
     return current_bytes == 0
