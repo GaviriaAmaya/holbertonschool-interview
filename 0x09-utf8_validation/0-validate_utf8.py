@@ -1,5 +1,9 @@
 #!/usr/bin/python3
+" Validate if a chain of characters is a valid UTF-8 char "
+
+
 def validUTF8(data):
+	" Method that receives an array and returns boolean "
 	current_bytes = 0
 
 	for num in data:
