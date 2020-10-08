@@ -1,6 +1,6 @@
 #include "menger.h"
 /**
- * menger - Function that draws a Menger Sponge (2D)
+ * menger - Function that prints a Menger Sponge (2D)
  * @level: Level of the Menger Sponge. It is pow at three
  */
 void menger(int level)
